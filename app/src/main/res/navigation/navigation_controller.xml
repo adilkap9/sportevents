@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_controller"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.sportevents.presentation.fragments.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment_to_webviewFragment"
+            app:destination="@id/webviewFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_filterFragment"
+            app:destination="@id/filterFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_fixtureFragment"
+            app:destination="@id/fixtureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/webviewFragment"
+        android:name="com.example.sportevents.presentation.fragments.WebViewFragment"
+        android:label="fragment_webview"
+        tools:layout="@layout/fragment_webview" />
+    <dialog
+        android:id="@+id/filterFragment"
+        android:name="com.example.sportevents.presentation.fragments.FilterFragment"
+        android:label="fragment_filter"
+        tools:layout="@layout/fragment_filter" />
+    <dialog
+        android:id="@+id/fixtureFragment"
+        android:name="com.example.sportevents.presentation.fragments.FixtureFragment"
+        android:label="fragment_fixture"
+        tools:layout="@layout/fragment_fixture" />
+</navigation>

@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="220dp"
+    app:cardCornerRadius="32dp"
+    >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="240dp"
+        android:background="@drawable/shape_rectangle_white">
+
+        <ImageView
+            android:id="@+id/homeTeamImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="40dp"
+            android:src="@drawable/ic_ball"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/awayTeamImg"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginEnd="12dp"
+            android:src="@drawable/ic_ball"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvTeamHomeName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxLines="2"
+            android:text="Asia Euro United FC"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="@+id/homeTeamImg"
+            app:layout_constraintStart_toStartOf="@+id/homeTeamImg"
+            app:layout_constraintTop_toBottomOf="@+id/homeTeamImg" />
+
+        <TextView
+            android:id="@+id/tvTeamAwayName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:maxLines="2"
+            android:text="Asia Euro United FC"
+            app:layout_constraintEnd_toEndOf="@+id/awayTeamImg"
+            app:layout_constraintStart_toStartOf="@+id/awayTeamImg"
+            app:layout_constraintTop_toBottomOf="@+id/awayTeamImg" />
+
+        <TextView
+            android:id="@+id/tvStatus"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020, Finished"
+            android:layout_marginTop="160dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvTeamAwayName"
+            app:layout_constraintStart_toStartOf="@+id/tvTeamHomeName"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2020-05-16 10:30:00"
+            android:layout_marginTop="8dp"
+            app:layout_constraintEnd_toEndOf="@+id/tvStatus"
+            app:layout_constraintStart_toStartOf="@+id/tvStatus"
+            app:layout_constraintTop_toBottomOf="@+id/tvStatus" />
+
+        <TextView
+            android:id="@+id/tvScore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1 - 1"
+            style="@style/textScore"
+            android:layout_marginTop="80dp"
+            app:layout_constraintEnd_toStartOf="@+id/awayTeamImg"
+            app:layout_constraintStart_toEndOf="@+id/homeTeamImg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
